@@ -1,5 +1,13 @@
 import flet as ft
-with open("photo_b64.txt", "r") as f:
+import os
+
+# This finds the exact folder your portfolio.py is running in
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+file_path = os.path.join(BASE_DIR, "photo_b64.txt")
+
+# Use 'file_path' instead of just the filename string
+with open(file_path, "r") as f:
+    photo_data = f.read()
     photo_data = f.read().strip().replace("\n", "").replace("\r", "")
 
 photo_src = f"data:image/jpeg;base64,{photo_data}"
