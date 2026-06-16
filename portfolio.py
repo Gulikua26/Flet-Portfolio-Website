@@ -354,4 +354,4 @@ nav_button("Contact", ft.Icons.MAIL_OUTLINE),
         footer,
     )
 
-ft.app(target=main, view=ft.AppView.WEB_BROWSER, assets_dir=r".")
+ft.app(target=main, view=ft.AppView.WEB_BROWSER)
